@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <link rel="stylesheet" href="CSS/Style.css" />
+    <!-- Подключение стиля, иконки и js -->
+    <link rel="stylesheet" href="CSS/stylesheet.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="public/favicon.ico" />
+    <script src="script.js"></script>
+    <!-- Убираем второй глазок -->
+    <style>
+      input::-ms-reveal,
+      input::-ms-clear {
+        display: none;
+      }
+    </style>
     <meta charset="UTF-8" />
     <title>Регистрация</title>
   </head>
-  <body>
-      
+  <body class="body body-light">
+    <main class="wrapper">
+      <div></div>
+      <form class="container">
+        <header>
+          <h1>Регистрация</h1>
+        </header>
+        <button class="button-Google">
+          <img width="20px" src="img/google-logo.webp" />
+          <span>Войти через Google </span>
+        </button>
+        <div class="separator">Или через электроную почту</div>
+        <div class="field">
+          <label class="field-label" for="full-name">ФИО</label>
+          <input
+            id="full-name"
+            class="field-input"
+            type="text"
+            placeholder="Regina Cooper"
+          />
+        </div>
+        <div class="field">
+          <label class="field-label" for="login">Email</label>
+          <input
+            id="login"
+            class="field-input"
+            type="text"
+            placeholder="Example@example.com"
+          />
+        </div>
+        <div class="field">
+          <label class="field-label" for="password">Пароль</label>
+          <div>
+            <input
+              id="password"
+              class="field-input field-password"
+              type="password"
+              placeholder="******"
+            />
+            <a class="toggle-password" onclick="togglepassword()"
+              ><img id="img-eye" src="img/show.svg"
+            /></a>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="password-repeat"
+            >Подтверждение пароля</label
+          >
+          <div>
+            <input
+              id="repeat-password"
+              class="field-input field-password"
+              type="password"
+              placeholder="******"
+            />
+            <a class="toggle-password" onclick="togglePasswordRepeat()"
+              ><img id="repeat-img-eye" src="img/show.svg"
+            /></a>
+          </div>
+        </div>
+        <div class="field-options">
+          <div>
+            <input type="checkbox" id="accept" name="accept" class="checkbox" />
+            <label for="accept"
+              >Принимаю условия
+              <a href="//google.com" target="_blank"
+                >Политики конфиденциальности</a
+              ></label
+            >
+          </div>
+        </div>
+        <button class="button-next grow-ellipse">Зарегистрироваться</button>
+      </form>
+      <footer>
+        <p>Уже есть аккаунт? <a href="login.html"> Войти</a></p>
+      </footer>
+    </main>
   </body>
 </html>

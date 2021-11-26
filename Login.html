@@ -1,45 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <link rel="stylesheet" href="CSS/Style.css" />
-    <link type="image/x-icon" rel="shortcut icon" href="public/favicon.ico">
+      <!-- Подключение стиля, иконки и js -->
+      <link rel="stylesheet" href="CSS/stylesheet.css" />
+      <link type="image/x-icon" rel="shortcut icon" href="public/favicon.ico" />
+      <script src="script.js"></script>
+      <!-- Убираем второй глазок -->
+    <style>
+      input::-ms-reveal,
+      input::-ms-clear {
+        display: none;
+      }
+    </style>
     <meta charset="UTF-8" />
     <title>Компот</title>
   </head>
-  <body class="BodyAuth">
-    <img class="ImgMain" src="img/Illustration.svg" />
-    <main class="MainAuth">
-      <form class="FormAuth">
+  <body class="body">
+    <img class="img" src="img/rocket-logo.svg" />
+    <main class="wrapper">
+      <div></div>
+      <form class="container">
         <header>
           <h1>Авторизация</h1>
         </header>
-        <div class="Field">
-          <p class="FieldText">Email</p>
+        <button class="button-Google">
+          <img width="20px" src="img/google-logo.webp" />
+          <span>Войти через Google </span>
+        </button>
+        <div class="separator">Или через электроную почту</div>
+        <div class="field">
+          <label class="field-label" for="login">Email</label>
           <input
-            class="FieldInput"
+            id="login"
+            class="field-input"
             type="text"
             placeholder="Example@example.com"
           />
         </div>
-        <div class="Field">
-          <p class="FieldText">Пароль</p>
-          <input
-            class="FieldInput"
-            type="password"
-            placeholder=" • • • • • •"
-          />
-        </div>
-        <div class="AuthOptions">
+        <div class="field">
+          <label class="field-label" for="password">Пароль</label>
           <div>
-            <input type="checkbox" id="rememberMe" name="RememberMe" />
-            <label for="rememberMe">Запомнить меня</label>
+            <input
+              id="password"
+              class="field-input field-password"
+              type="password"
+              placeholder="******"
+            />
+            <a class="toggle-password" onclick="togglepassword()"
+              ><img id="img-eye" src="img/show.svg"
+            /></a>
           </div>
-          <a href="ForgetPassword.html">Забыли пароль</a>
         </div>
-        <button class="grow_ellipse">Войти</button>
+        <div class="field-options">
+          <div>
+            <input
+              type="checkbox"
+              id="remember-me"
+              name="remember-me"
+              class="checkbox"
+            />
+            <label for="remember-me">Запомнить меня</label>
+          </div>
+          <a href="forget-password.html">Забыли пароль</a>
+        </div>
+        <button class="button-next grow-ellipse">Войти</button>
       </form>
       <footer>
-        <p>Нет аккаунта? <a href="Registration.html"> Зарегистрироваться</a></p>
+        <p>Нет аккаунта? <a href="registration.html"> Зарегистрироваться</a></p>
       </footer>
     </main>
   </body>
