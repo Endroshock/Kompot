@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-      <!-- Подключение стиля, иконки и js -->
-      <link rel="stylesheet" href="CSS/stylesheet.css" />
-      <link type="image/x-icon" rel="shortcut icon" href="public/favicon.ico" />
-      <script src="script.js"></script>
-      <!-- Убираем второй глазок -->
+    <!-- Подключение стиля, иконки и js -->
+    <link rel="stylesheet" href="CSS/stylesheet.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="public/favicon.ico" />
+    <script src="script.js"></script>
+    <!-- Убираем второй глазок -->
     <style>
       input::-ms-reveal,
       input::-ms-clear {
@@ -13,7 +13,7 @@
       }
     </style>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Компот</title>
   </head>
   <body class="body">
@@ -36,6 +36,7 @@
             class="field-input"
             type="text"
             placeholder="Example@example.com"
+            required
           />
         </div>
         <div class="field">
@@ -46,6 +47,7 @@
               class="field-input field-password"
               type="password"
               placeholder="******"
+              required
             />
             <a class="toggle-password" onclick="togglepassword()"
               ><img id="img-eye" src="img/show.svg"

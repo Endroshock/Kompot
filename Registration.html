@@ -34,6 +34,7 @@
             class="field-input"
             type="text"
             placeholder="Regina Cooper"
+            required
           />
         </div>
         <div class="field">
@@ -43,6 +44,7 @@
             class="field-input"
             type="text"
             placeholder="Example@example.com"
+            required
           />
         </div>
         <div class="field">
@@ -53,6 +55,7 @@
               class="field-input field-password"
               type="password"
               placeholder="******"
+              required
             />
             <a class="toggle-password" onclick="togglepassword()"
               ><img id="img-eye" src="img/show.svg"
@@ -69,6 +72,7 @@
               class="field-input field-password"
               type="password"
               placeholder="******"
+              required
             />
             <a class="toggle-password" onclick="togglePasswordRepeat()"
               ><img id="repeat-img-eye" src="img/show.svg"
@@ -77,7 +81,7 @@
         </div>
         <div class="field-options">
           <div>
-            <input type="checkbox" id="accept" name="accept" class="checkbox" />
+            <input type="checkbox" id="accept" name="accept" class="checkbox" required/>
             <label for="accept"
               >Принимаю условия
               <a href="//google.com" target="_blank"
