@@ -18,13 +18,16 @@ a:hover {
 
 html,
 body {
-  height: 90%;
+  height: 94%;
 }
 
 header {
   color: #3f434a;
   text-align: center;
   margin-bottom: 35px;
+}
+header > img {
+  padding-top: 135px;
 }
 
 footer {
@@ -55,7 +58,7 @@ footer {
 .wrapper {
   background-color: white;
   width: 600px;
-  height: 100%;
+  height: auto;
   min-height: 800px;
   border-radius: 20px;
   display: flex;
@@ -63,6 +66,10 @@ footer {
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
+}
+
+.wrapper-light {
+  min-height: auto;
 }
 
 .container {
@@ -137,7 +144,7 @@ footer {
 }
 
 .separator {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
   text-align: center;
@@ -194,4 +201,19 @@ footer {
 }
 .button-next.grow-ellipse:hover::after {
   transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1000px) {
+  .img {
+    width: 0%;
+    flex-basis: 0%;
+  }
+  .wrapper,
+  .container {
+    width: 90%;
+    height: 90%;
+  }
+  .body {
+    justify-content: center;
+  }
 }
