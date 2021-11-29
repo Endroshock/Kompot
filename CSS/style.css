@@ -123,6 +123,9 @@ footer {
 .checkbox {
   accent-color: #304ffd;
 }
+.wrapper-checkbox > * {
+  cursor: pointer;
+}
 
 .button-Google {
   height: 40px;
