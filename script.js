@@ -23,16 +23,13 @@ function togglePasswordRepeat() {
   }
 }
 
-var password = document.getElementById("password"),
-repeat_password = document.getElementById("repeat-password");
 
 function validatePassword() {
+  var password = document.getElementById("password"),
+repeat_password = document.getElementById("repeat-password");
   if (password.value != repeat_password.value) {
     repeat_password.setCustomValidity("Пароли не совпадают");
   } else {
     repeat_password.setCustomValidity("");
   }
 }
-
-password.onchange = validatePassword;
-repeat_password.onkeyup = validatePassword;

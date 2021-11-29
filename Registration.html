@@ -56,6 +56,7 @@
               type="password"
               placeholder="******"
               required
+              onchange="validatePassword()"
             />
             <a class="toggle-password" onclick="togglepassword()"
               ><img id="img-eye" src="img/show.svg"
@@ -73,6 +74,7 @@
               type="password"
               placeholder="******"
               required
+              onkeyup="validatePassword()"
             />
             <a class="toggle-password" onclick="togglePasswordRepeat()"
               ><img id="repeat-img-eye" src="img/show.svg"
@@ -96,7 +98,7 @@
             >
           </div>
         </div>
-        <button class="button-next grow-ellipse">Зарегистрироваться</button>
+        <button type="submit" class="button-next grow-ellipse">Зарегистрироваться</button>
       </form>
       <footer>
         <p>Уже есть аккаунт? <a href="login.html"> Войти</a></p>
